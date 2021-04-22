@@ -30,7 +30,6 @@ export default function Home() {
                             className="giphy-embed"
                             allowFullScreen
                         ></iframe>
-                        {/* <div className="copri"></div> */}
                     </div>
                     <div className="rightTitle">
                         <h4 className="subTitle" style={{ marginBottom: -20 }}>
@@ -65,9 +64,6 @@ export default function Home() {
                     </div>
                 </div>
                 <TickerContainer />
-                {/* <img src="/globe.png" className="App-logo" alt="logo" /> */}
-                {/* <div className="coproglobo"></div>
-                <div className="copridestra"></div> */}
                 <Footer home />
             </header>
         </div>

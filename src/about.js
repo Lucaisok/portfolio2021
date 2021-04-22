@@ -22,26 +22,13 @@ export default function About() {
                     </span>{" "}
                     <br />
                     <span className="under">
-                        Want to know more? here is my{" "}
+                        Want to know more ?
                         <span className="resume">
-                            <a
-                                href="public/cv.pdf"
-                                download="Luca Tomarelli CV.pdf"
-                            >
-                                resume
-                            </a>
-                        </span>
-                        <br />
-                        ...or,{" "}
-                        <span className="resume">
-                            <a href="/contact">get in touch!</a>
+                            <a href="/contact"> get in touch!</a>
                         </span>
                     </span>
                 </h1>
             </div>
-            {/* <div className="ball"></div> */}
-            {/* <div className="ball2"></div> */}
-            {/* <div className="ball3"></div> */}
             <Footer about home />
         </div>
     );
