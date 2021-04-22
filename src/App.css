@@ -1,38 +1,796 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond,
+        "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f2f2f2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    margin: 0;
+    max-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.namer {
+    width: 100%;
+    height: 185px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("/src/namer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 0;
+}
+
+.middleLine {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subTitle {
+    font-size: 54px;
+}
+
+.gifAndCover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.giphy-embed {
+    /* position: absolute;
+    left: 35%;
+    right: 35%;
+    top: 35%;
+    bottom: 35%; */
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+}
+
+.copri {
+    width: 30%;
+    height: 30%;
+    /* position: absolute;
+    right: 35%;
+    left: 35%;
+    top: 35%;
+    bottom: 35%; */
+    background-color: transparent;
+    z-index: 2;
+}
+
+.ticker {
+    width: 100%;
+    color: #f2f2f2;
+    background-color: black;
+    top: 50px;
+    z-index: 4;
+    white-space: nowrap;
+}
+
+.ticketText {
+    font-family: monospace;
+}
+
+.App-logo {
+    height: 20vmin;
+    pointer-events: none;
+    position: absolute;
+    bottom: 15%;
+    right: 3%;
+    z-index: 6;
+}
+
+.coproglobo {
+    height: 20vmin;
+    width: 20vmin;
+    background: #f2f2f2;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 15%;
+    right: 3%;
+    z-index: 5;
+    border-radius: 100%;
+}
+
+.copridestra {
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 0%;
+    bottom: 22%;
+    z-index: 4;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer img {
+    cursor: pointer;
+}
+
+.namerMobile {
+    display: none;
+}
+
+.mobileMiddleLine {
+    display: none;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frontend {
+    transform: rotate(270deg);
+}
+
+.based {
+    transform: rotate(90deg);
+}
+
+/* PROJECTS */
+
+.projectsContainer {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.projectsTitle {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 33%;
+    left: -50px;
+    font-size: 55px;
+    border-bottom: 2px solid black;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 10px;
+    height: 80%;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.card {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 14px;
+    box-shadow: 2px 2px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    height: 280px;
+    overflow-y: hidden;
+}
+
+.imageContainer {
+    height: 30%;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 2px black;
+}
+
+.desBoxContainer {
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+    padding-top: 0;
+}
+
+.desBox {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding-left: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+.front,
+.back,
+.db {
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    margin-left: 10px;
+}
+
+.front p,
+.back p,
+.db p {
+    margin-right: 10px;
+}
+
+.buttonsContainer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.buttonsContainer button {
+    width: 40%;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: monospace;
+}
+
+.backCard {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 14px;
+    box-shadow: 2px 2px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: black;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardCover {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 12px;
+    z-index: 1000;
+}
+
+.proModal {
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    width: 89%;
+    height: 85%;
+    background-color: white;
+    border-radius: 14px;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.proModal h1 {
+    font-size: 45px;
+    margin-left: 5%;
+}
+
+.x {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 50px;
+}
+
+.imgContainer div {
+    width: 40%;
+    height: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 14px;
+}
+
+.desc {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+.techSpace {
+    width: 80%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.techies {
+    width: 40%;
+    height: 100%;
+}
+
+.front2,
+.back2,
+.db2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    font-size: 18px;
+}
+
+.modalButtonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+}
+
+.modalButtonsContainer button {
+    width: 30%;
+    height: 40px;
+    border-radius: 4px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+/* CONTACT */
+
+.contactContainer {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contact {
+    width: 100%;
+    height: 155px;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    background-image: url("/src/contact.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 0;
+}
+
+.addressContainer {
+    width: 100%;
+    /* height: 500px; */
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /* width: 100%; */
+    height: auto;
+}
+
+.address p {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.iconsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.iconsContainer img {
+    width: 100px;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* ABOUT */
+
+.aboutContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: antiquewhite; */
+}
+
+.aboutTitle {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 33%;
+    right: -40px;
+    font-size: 55px;
+    border-bottom: 2px solid black;
+    z-index: 6;
+    /* margin-top: -10px; */
+}
+
+.testo {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 150px;
+}
+
+.hey {
+    font-size: 55px;
+    margin-left: 20px;
+    margin-top: 5%;
+    z-index: 4;
+    position: relative;
+}
+
+.Hey {
+    font-size: 80px;
+    /* background-color: thistle; */
+    width: 600px;
+    border-radius: 60px 20px 50px 30px;
+}
+
+.bodyText {
+    font-size: 40px;
+    /* background-color: khaki; */
+    width: 600px;
+    border-radius: 60px 20px 50px 30px;
+}
+
+.full {
+    /* background-color: crimson; */
+    width: 600px;
+    border-radius: 80px 50px 40px 30px;
+}
+
+.underBody {
+    font-size: 35px;
+    /* background-color: aqua; */
+    width: 300px;
+    border-radius: 10px 60px 20px 0;
+}
+
+.under {
+    font-size: 30px;
+    /* background-color: tomato; */
+    color: black;
+    width: 600px;
+    border-radius: 80px 50px 10px 30px;
+}
+
+.resume {
+    text-decoration: underline;
+    cursor: pointer;
+    /* color: seashell !important; */
+}
+
+.ball {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border-radius: 0 50% 50% 0%;
+    z-index: 2;
+}
+
+.ball2 {
+    background-color: salmon;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    border-radius: 50% 0 0 50%;
+    z-index: 3;
+}
+
+.ball3 {
+    background-color: steelblue;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 80%;
+    height: 70%;
+    border-radius: 50% 50% 0 0%;
+    z-index: 2;
+}
+
+.noButton {
+    display: none !important;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@media (max-width: 950px) {
+    .aboutTitle {
+        display: none;
+    }
+    .cardsContainer {
+        grid-template-columns: 1fr 1fr;
+        width: 87%;
+        margin-left: 13%;
+    }
+
+    .contact {
+        width: 150%;
+    }
+
+    .aboutContainer {
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 700px) {
+    .giphy-embed {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr 1fr;
+        width: 84%;
+        margin-left: 16%;
+    }
+}
+/* MOBILE FROM HERE */
+@media (max-width: 600px) {
+    /* .aboutContainer {
+        background-color: antiquewhite;
+    } */
+
+    .testo {
+        margin-bottom: 300px;
+    }
+    .App-logo {
+        height: 24vmin;
+    }
+
+    .contact {
+        width: 200%;
+    }
+
+    .iconsContainer img {
+        width: 90px;
+    }
+
+    .address p {
+        font-size: 19px;
+        margin-left: 10px;
+    }
+
+    .projectsTitle {
+        transform: rotate(360deg);
+        position: unset;
+        font-size: 55px;
+        border-bottom: 4px solid black;
+        text-align: center;
+        margin-top: 6px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 75%;
+        padding-left: auto;
+        padding-right: auto;
+        overflow-y: scroll;
+        margin: auto;
+    }
+
+    .card {
+        width: 90%;
+        height: 300px;
+        box-shadow: 0px 0px;
+        border: 3px solid black;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .desBoxContainer {
+        overflow-x: hidden;
+    }
+
+    .desBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .buttonsContainer {
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+
+    .backCard {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        height: 300px;
+        box-shadow: 0px 0px;
+        border: 3px solid black;
+    }
+
+    .proModal {
+        top: 14%;
+        left: 5%;
+        width: 90%;
+        height: 73%;
+        background-color: white;
+        border-radius: 14px;
+        border-width: 2px;
+        border-style: solid;
+        overflow: auto;
+    }
+
+    .desc {
+        width: 90%;
+    }
+
+    .techSpace {
+        flex-direction: column;
+        align-items: flex-start;
+        height: unset;
+        width: 90%;
+    }
+
+    .techies {
+        width: 100%;
+        height: 100%;
+    }
+
+    .modalButtonsContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .middleLine {
+        display: none;
+    }
+
+    .mobileMiddleLine {
+        display: inline-block;
+    }
+
+    .copridestra {
+        bottom: 20%;
+    }
+
+    .App-logo {
+        bottom: 16%;
+    }
+
+    .coproglobo {
+        bottom: 16%;
+    }
+}
+
+@media (max-width: 450px) {
+    .App-logo {
+        bottom: 17%;
+    }
+
+    .coproglobo {
+        bottom: 17%;
+    }
+
+    .cardsContainer {
+        width: 80%;
+    }
+
+    .App-logo {
+        height: 28vmin;
+    }
+}
+
+@media (max-width: 400px) {
+    .App-logo {
+        bottom: 18%;
+    }
+
+    .coproglobo {
+        bottom: 18%;
+    }
+}
+
+@media (max-width: 360px) {
+    .App-logo {
+        bottom: 19%;
+    }
+
+    .coproglobo {
+        bottom: 19%;
+    }
+
+    .cardsContainer {
+        width: 90%;
+    }
 }

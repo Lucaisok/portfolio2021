@@ -1,0 +1,124 @@
+[
+    {
+        "id": 0,
+        "img": "images/collect.png",
+        "img2": "images/login.png",
+        "img3": "images/thanks.png",
+        "name": "Collect",
+        "smallDes": "Data Tracker Web App",
+        "description": "Developed as the final project of my Bootcamp at Spiced Academy, Collect is a fully functional web app for Restaurants, Bars and Clubs owners that keep tracks of the customers data and automatically delete it after 14 days. The purpose of this app is to help flattening the Covid curve making easier for bars and restaurants to keep track of their customers and, at the same time, improving the privacy protection of the users.",
+        "tech": {
+            "front": "React",
+            "back": "Node.js + Express",
+            "database": "Postgres"
+        },
+        "link": {
+            "website": "https://collect-webapp.herokuapp.com/",
+            "github": "https://github.com/Lucaisok/finalproject"
+        },
+        "buttonBgColor": "#3BB59E",
+        "buttonColor": "#FDFEFF"
+    },
+    {
+        "id": 1,
+        "img": "images/lis.png",
+        "img2": "images/lisart2.png",
+        "img3": "images/lisart3.png",
+        "name": "Lisart",
+        "smallDes": "Artist portfolio + Admin panel",
+        "description": "Full responsive showcase website for the Salzburg based floral artist Lisa-Maria Thalmayr aka Lisart. The front end is made with React, Node.js in duty of the back end. Features an admin panel to let her add and delete projects on her own. I used multer and AWS S3 to upload content on the cloud, AWS SES for the contact form and Postgres as a database.",
+        "tech": {
+            "front": "React",
+            "back": "Node.js + Express",
+            "database": "Postgres"
+        },
+        "link": {
+            "website": "https://lisartearth.herokuapp.com/",
+            "github": "https://github.com/Lucaisok/lisart"
+        },
+        "buttonBgColor": "#000000",
+        "buttonColor": "#E6FF41"
+    },
+    {
+        "id": 2,
+        "img": "images/social2.png",
+        "img2": "images/friends.png",
+        "img3": "images/socialRegister.png",
+        "name": "Social IPA",
+        "smallDes": "Social Network for IPA beer passionates",
+        "description": "Social Network for IPA beer passionates. Features the most common social functionalities: login and logout / ask, accept, decline and delete friendship / send and receive private messages / upload pics and update bio. Made wit React + Redux, Node.js (Express), Socket.io, AWS and Postgres.",
+        "tech": {
+            "front": "React + Redux, Socket.io",
+            "back": "Node.js + Express",
+            "database": "Postgres"
+        },
+        "icons": {
+            "front1": "/react.png",
+            "front2": "/react.png"
+        },
+        "link": {
+            "website": "",
+            "github": "https://github.com/Lucaisok/Social-Network"
+        },
+        "buttonBgColor": "#FAECD7",
+        "buttonColor": "#01394E"
+    },
+    {
+        "id": 3,
+        "img": "images/smart.png",
+        "img3": "images/smart2.png",
+        "img2": "images/smart3.png",
+        "name": "Smart It",
+        "smallDes": "Showcase website + Contact Form",
+        "description": "Showcase website developed for Smart it, a facilty management company in Milan, Italy.",
+        "tech": {
+            "front": "Jquery, CSS, HTML",
+            "back": "Node.js, AWS Ses",
+            "database": "/"
+        },
+        "link": {
+            "website": "",
+            "github": "https://github.com/Lucaisok/smart"
+        },
+        "buttonBgColor": "#71A62E",
+        "buttonColor": "white"
+    },
+    {
+        "id": 4,
+        "img3": "images/synthboard.png",
+        "img2": "images/synthModal.png",
+        "img": "images/synthBig.png",
+        "name": "SynthBoard",
+        "smallDes": "Instagram inspired web app for Synth enthusiasts",
+        "description": "Instagram style web app for Synth enthusiasts made with Vue.js, AWS, Node.js. Upload images of your favorites synthesizers, leave comments or just explore what the users like to play!",
+        "tech": {
+            "front": "Vue.js, AWS",
+            "back": "Node.js + Express",
+            "database": "Postgres"
+        },
+        "link": {
+            "website": "",
+            "github": "https://github.com/Lucaisok/Synthboard"
+        }
+    },
+    {
+        "id": 5,
+        "img3": "images/autonoma.png",
+        "img2": "images/autonomaLogo.png",
+        "img": "images/seeYou.png",
+        "name": "Autonoma",
+        "smallDes": "Minimalistic style mailing list subscriber",
+        "description": "Minimalistic style mailing list subscriber for Autonoma Industriale, a Berlin based record label and party series focused on private concerts and underground events. Made with React, Express and Postgres. Features an admin panel to retrieve data from the database",
+        "tech": {
+            "front": "React",
+            "back": "Node.js + Express",
+            "database": "Postgres"
+        },
+        "link": {
+            "website": "http://www.autonomaindustriale.com/",
+            "github": "https://github.com/Lucaisok/autonomaMailingList"
+        },
+        "buttonBgColor": "#292929",
+        "buttonColor": "#9F1F1E"
+    }
+]
