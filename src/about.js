@@ -9,7 +9,7 @@ export default function About() {
                 <h1 className="hey">
                     <span className="Hey">Hey,</span> <br />
                     <span className="full">
-                        I am a Full Stack JavaScript Developer,
+                        I am a Front End JavaScript Developer,
                     </span>{" "}
                     <br />
                     <span className="bodyText">

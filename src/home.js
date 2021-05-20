@@ -14,7 +14,7 @@ export default function Home() {
                 <div className="middleLine">
                     <div className="leftTitle">
                         <h4 className="subTitle" style={{ marginBottom: -20 }}>
-                            Fullstack
+                            Front End
                         </h4>
                         <h4 className="subTitle" style={{ marginTop: -30 }}>
                             Developer
