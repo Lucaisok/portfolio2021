@@ -6,10 +6,10 @@ const TickerContainer = () => (
         {({ index }) => (
             <>
                 <h1 className="ticketText">
-                    Hey, I am a Full Stack JavaScript Developer, that means I
-                    design and develop Web and Mobile Applications that are
-                    responsive, functional and appealing. This is my portfolio,
-                    check it out!
+                    Hey, I am a Front End Developer, that means I design and
+                    develop Web and Mobile Applications that are responsive,
+                    functional and appealing. This is my portfolio, check it
+                    out!
                 </h1>
             </>
         )}
