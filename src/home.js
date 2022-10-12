@@ -14,7 +14,7 @@ export default function Home() {
                 <div className="middleLine">
                     <div className="leftTitle">
                         <h4 className="subTitle" style={{ marginBottom: -20 }}>
-                            Front End
+                            Full Stack
                         </h4>
                         <h4 className="subTitle" style={{ marginTop: -30 }}>
                             Developer
@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="mobileMiddleLine">
                     <div className="horizontalContainer">
                         <h1 className="frontend" style={{ marginRight: -54 }}>
-                            Frontend
+                            Full Stack
                         </h1>
                         <div className="verticalContainer">
                             <h1 style={{ marginBottom: 0 }}>Developer</h1>
